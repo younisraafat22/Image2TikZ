@@ -27,8 +27,7 @@ The project is built on top of the original [DeTikZify](https://github.com/potam
 │   ├── infer/                  # Inference pipeline and TikZ generation
 │   ├── evaluate/               # Evaluation metrics and benchmarks
 │   ├── dataset/                # Dataset loading and preprocessing
-│   ├── train/                  # Training utilities
-│   └── webui/                  # Web interface for interactive use
+│   └── train/                  # Training utilities
 ├── evaluation/                 # Modular evaluation framework
 │   ├── core_metrics.py         # Core KL and distillation metrics
 │   ├── advanced_analysis.py    # Top-K and confidence analysis
@@ -142,14 +141,6 @@ python run_evaluation.py \\
     --output_file evaluation_results.json \\
     --max_samples 1000 \\
     --temperature 3.0
-```
-
-### Web Interface
-
-Launch the interactive web UI:
-
-```bash
-python -m detikzify.webui --share --light
 ```
 
 ## 📈 Key Features
