@@ -29,7 +29,6 @@ The project is built on top of the original [DeTikZify](https://github.com/potam
 │   ├── dataset/                # Dataset loading and preprocessing
 │   ├── train/                  # Training utilities
 │   └── webui/                  # Web interface for interactive use
-├── examples/                   # Example scripts for training/evaluation
 ├── evaluation/                 # Modular evaluation framework
 │   ├── core_metrics.py         # Core KL and distillation metrics
 │   ├── advanced_analysis.py    # Top-K and confidence analysis
