@@ -210,17 +210,8 @@ The MCTS implementation is licensed under the MIT License (see `detikzify/mcts/L
 - [TikZ Documentation](https://ctan.org/pkg/pgf)
 - [Hugging Face Models](https://huggingface.co/nllg)
 
-## ⚠️ Important Notes
+## 🛠️ Troubleshooting
 
-### Files to Clean Before Publishing
-The following files should be cleaned up before publishing:
-- `__pycache__/` directories (excluded by .gitignore)
-- `evaluation_results/` (if containing large result files)
-- Any `checkpoint-*/` directories in outputs
-- Training log files (*.log)
-
-
-### Troubleshooting
 - Ensure LaTeX is properly installed and accessible via PATH
 - For compilation errors, check that all required LaTeX packages are installed
 - If running out of GPU memory, reduce batch size or use gradient checkpointing
