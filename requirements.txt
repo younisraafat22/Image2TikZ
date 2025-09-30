@@ -1,0 +1,38 @@
+# Core ML/AI dependencies
+torch>=1.13.0
+transformers>=4.30.0
+datasets>=2.0.0
+accelerate>=0.20.0
+
+# Computer Vision
+Pillow>=9.0.0
+timm>=0.9.0
+torchvision>=0.14.0
+
+# PDF and Image processing
+PyMuPDF  # fitz
+pdf2image>=3.0.0
+pdfCropMargins>=1.0.0
+
+# Scientific computing
+numpy>=1.21.0
+
+# Training utilities
+tqdm>=4.64.0
+
+# Web UI (optional)
+gradio>=3.0.0
+
+# Evaluation metrics (optional)
+lpips>=0.1.4  # for image similarity metrics
+scipy>=1.9.0
+
+# Development
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+
+# LaTeX dependencies (system-level, mentioned for documentation)
+# - TeX Live 2023+ (pdflatex, lualatex, xelatex)
+# - Ghostscript
+# - Poppler utils
