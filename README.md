@@ -23,25 +23,20 @@ The project is built on top of the original [DeTikZify](https://github.com/potam
 
 ```
 ├── detikzify/                  # Core DeTikZify framework
-│   ├── model/                  # Model architectures and loading utilities
-│   ├── infer/                  # Inference pipeline and TikZ generation
-│   ├── evaluate/               # Evaluation metrics and benchmarks
-│   ├── dataset/                # Dataset loading and preprocessing
-│   └── train/                  # Training utilities
 ├── evaluation/                 # Modular evaluation framework
 │   ├── core_metrics.py         # Core KL and distillation metrics
 │   ├── advanced_analysis.py    # Top-K and confidence analysis
-│   ├── eval_utils.py          # Model loading and data utilities
-│   ├── evaluator.py           # Main evaluation orchestrator
-│   └── run_evaluation.py      # CLI evaluation interface
-├── train.py                   # Main training script for knowledge distillation
-├── inference.py               # Simple inference example
-├── model_utils.py             # Model loading and management utilities
-├── data_utils.py              # Data processing for knowledge distillation
-├── training_utils.py          # Training step implementations
-├── loss_functions.py          # Custom loss functions for distillation
-├── checkpoint_utils.py        # Checkpoint saving and loading
-└── requirements.txt           # Python dependencies
+│   ├── eval_utils.py           # Model loading and data utilities
+│   ├── evaluator.py            # Main evaluation orchestrator
+│   └── run_evaluation.py       # CLI evaluation interface
+├── train.py                    # Main training script for knowledge distillation
+├── inference.py                # Simple inference example
+├── model_utils.py              # Model loading and management utilities
+├── data_utils.py               # Data processing for knowledge distillation
+├── training_utils.py           # Training step implementations
+├── loss_functions.py           # Custom loss functions for distillation
+├── checkpoint_utils.py         # Checkpoint saving and loading
+└── requirements.txt            # Python dependencies
 ```
 
 ## 🚀 Getting Started
