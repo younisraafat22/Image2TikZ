@@ -44,8 +44,8 @@ The project is built on top of the original [DeTikZify](https://github.com/potam
 ### Prerequisites
 
 1. **Hardware Requirements**: 
-   - **2+ CUDA GPUs** (required for dual GPU setup)
-   - Minimum 8GB VRAM per GPU recommended
+   - **2+ High-end CUDA GPUs** (required for dual GPU setup)
+   - Tested on 2x 48GB GPUs (high VRAM required for 7B parameter models)
 2. **Python Environment**: Python 3.8+
 3. **LaTeX Distribution**: TeX Live 2023+ with pdflatex, lualatex, xelatex
 4. **System Dependencies**:
