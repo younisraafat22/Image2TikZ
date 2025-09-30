@@ -35,24 +35,24 @@ def parse_args():
     parser.add_argument("--output_dir", type=str, required=True, help="Output directory")
     parser.add_argument("--teacher_model", type=str, default="nllg/detikzify-cl-7b", help="Teacher model")
     parser.add_argument("--student_model", type=str, default="nllg/detikzify-tl-1.1b", help="Student model")
-    parser.add_argument("--dataset", type=str, default="nllg/datikz-v2", help="Dataset")
+    parser.add_argument("--dataset", type=str, default="nllg/datikz-v3", help="Dataset")
     
     # Training parameters
-    parser.add_argument("--num_train_epochs", type=int, default=3, help="Number of epochs")
+    parser.add_argument("--num_train_epochs", type=int, default=2, help="Number of epochs")
     parser.add_argument("--batch_size", type=int, default=1, help="Batch size")
-    parser.add_argument("--gradient_accumulation_steps", type=int, default=16, help="Gradient accumulation")
-    parser.add_argument("--learning_rate", type=float, default=2e-5, help="Learning rate")
-    parser.add_argument("--warmup_ratio", type=float, default=0.1, help="Warmup ratio for LR scheduler")
+    parser.add_argument("--gradient_accumulation_steps", type=int, default=32, help="Gradient accumulation")
+    parser.add_argument("--learning_rate", type=float, default=1e-5, help="Learning rate")
+    parser.add_argument("--warmup_ratio", type=float, default=0.15, help="Warmup ratio for LR scheduler")
     
     # Distillation parameters
     parser.add_argument("--temperature", type=float, default=4.0, help="Temperature for logits distillation")
-    parser.add_argument("--alpha", type=float, default=0.7, help="KD vs CE loss balance (0.7 = 70% KD)")
+    parser.add_argument("--alpha", type=float, default=0.2, help="KD vs CE loss balance (0.2 = 20% KD)")
     
     # Optional parameters
     parser.add_argument("--max_samples", type=int, default=None, help="Max samples (None = all)")
-    parser.add_argument("--logging_steps", type=int, default=25, help="Logging frequency")
-    parser.add_argument("--save_steps", type=int, default=500, help="Save frequency")
-    parser.add_argument("--eval_steps", type=int, default=500, help="Evaluation frequency")
+    parser.add_argument("--logging_steps", type=int, default=64, help="Logging frequency")
+    parser.add_argument("--save_steps", type=int, default=1600, help="Save frequency")
+    parser.add_argument("--eval_steps", type=int, default=1600, help="Evaluation frequency")
     parser.add_argument("--eval_batches", type=int, default=100, help="Number of batches to use for each evaluation")
     parser.add_argument("--device", type=str, default="cuda", help="Device")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
