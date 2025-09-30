@@ -59,7 +59,7 @@ The project is built on top of the original [DeTikZify](https://github.com/potam
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/younisraafat22/Image2TikZ.git
 cd Image2TikZ
 ```
 
@@ -68,7 +68,14 @@ cd Image2TikZ
 pip install -r requirements.txt
 ```
 
-3. Install system dependencies (Ubuntu/Debian):
+3. Install system dependencies:
+
+**Option A: Using conda (recommended - no sudo required):**
+```bash
+conda install -c conda-forge texlive-core ghostscript poppler
+```
+
+**Option B: Using system package manager (Ubuntu/Debian):**
 ```bash
 sudo apt-get update
 sudo apt-get install texlive-full ghostscript poppler-utils
