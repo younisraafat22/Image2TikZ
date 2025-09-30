@@ -48,9 +48,12 @@ The project is built on top of the original [DeTikZify](https://github.com/potam
 
 ### Prerequisites
 
-1. **Python Environment**: Python 3.8+
-2. **LaTeX Distribution**: TeX Live 2023+ with pdflatex, lualatex, xelatex
-3. **System Dependencies**:
+1. **Hardware Requirements**: 
+   - **2+ CUDA GPUs** (required for dual GPU setup)
+   - Minimum 8GB VRAM per GPU recommended
+2. **Python Environment**: Python 3.8+
+3. **LaTeX Distribution**: TeX Live 2023+ with pdflatex, lualatex, xelatex
+4. **System Dependencies**:
    - Ghostscript (for PDF processing)
    - Poppler utils (for PDF to image conversion)
 
@@ -97,8 +100,11 @@ python train.py \\
     --gradient_accumulation_steps 32 \\
     --learning_rate 1e-5 \\
     --temperature 4.0 \\
-    --alpha 0.2
+    --alpha 0.2 \\
+    --use_dual_gpu
 ```
+
+**Important**: The `--use_dual_gpu` flag is **required** for proper operation and is enabled by default. It places the teacher model on GPU 0 and student model on GPU 1 to avoid memory conflicts and device mismatch errors.
 
 ### Simple Inference
 
@@ -212,6 +218,12 @@ The MCTS implementation is licensed under the MIT License (see `detikzify/mcts/L
 
 ## 🛠️ Troubleshooting
 
+### Training Issues
+- **Dual GPU Required**: This framework requires 2+ GPUs and uses `--use_dual_gpu` by default
+- **Device Mismatch Error**: If you get "Expected all tensors to be on the same device" error, ensure you have 2+ GPUs available
+- **Single GPU Not Supported**: The current implementation requires separate GPUs for teacher and student models
+- **GPU Memory**: If running out of memory, reduce `--batch_size` or increase `--gradient_accumulation_steps`
+
+### System Dependencies  
 - Ensure LaTeX is properly installed and accessible via PATH
 - For compilation errors, check that all required LaTeX packages are installed
-- If running out of GPU memory, reduce batch size or use gradient checkpointing

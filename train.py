@@ -56,8 +56,8 @@ def parse_args():
     parser.add_argument("--eval_batches", type=int, default=100, help="Number of batches to use for each evaluation")
     parser.add_argument("--device", type=str, default="cuda", help="Device")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
-    # Optional multi-GPU (teacher/student split)
-    parser.add_argument("--use_dual_gpu", action="store_true", help="Run teacher on one GPU and student on another")
+    # Multi-GPU (teacher/student split) - recommended for stability
+    parser.add_argument("--use_dual_gpu", action="store_true", default=True, help="Run teacher on one GPU and student on another (recommended)")
     parser.add_argument("--teacher_device", type=str, default="cuda:0", help="Device for teacher when using dual GPU")
     parser.add_argument("--student_device", type=str, default="cuda:1", help="Device for student when using dual GPU")
     
